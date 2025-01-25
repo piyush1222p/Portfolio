@@ -20,7 +20,7 @@
       padding: 0;
       color: #333;
       background-color: #f4f4f4;
-      padding-top: 120px; /* Space for header and nav bar */
+      padding-top: 70px; /* Adjusted space for header */
       padding-bottom: 60px; /* Space for footer */
     }
 
@@ -431,13 +431,14 @@
       }
       lastScrollTop = scrollTop;
 
-      // Detect if the user is at the last section
-      const lastSection = document.querySelector('section:last-of-type');
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !scrollUpPerformed) {
+      // Detect if the user is at the end of the page
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1 && !scrollUpPerformed) {
         setTimeout(() => {
           header.style.transform = 'translateY(0)';
           footer.classList.remove('hidden');
-          window.scrollBy(0, -100); // Scroll up a little bit higher
+          const extracurricularSection = document.getElementById('extracurricular');
+          const scrollAmount = extracurricularSection.offsetHeight;
+          window.scrollBy(0, -scrollAmount); // Scroll up by the height of the extracurricular section
           scrollUpPerformed = true; // Set the flag to true after performing the scroll up action
         }, 5000); // Show header and footer and scroll up after 5 seconds
       }
