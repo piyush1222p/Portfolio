@@ -94,6 +94,10 @@
       background-color: #575757;
     }
 
+    nav a.active {
+      background-color: #003F5C; /* Highlight active link */
+    }
+
     section {
       padding: 1.5em;
       margin: 1em auto;
@@ -132,6 +136,37 @@
 
     footer.hidden {
       transform: translateY(100%);
+    }
+
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Adjust spacing between icons */
+    }
+
+    .social-links li {
+      margin: 0;
+    }
+
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px; /* Ensure icon size is consistent */
+    }
+
+    .verified-icon {
+      display: inline-block;
+      width: 20px; /* Default size */
+      height: 20px; /* Default size */
+      background-color: #0d9d58; /* Verified icon color */
+      color: white;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 20px; /* Match the height */
+      font-size: 14px; /* Adjust font size to fit */
     }
 
     @media (max-width: 768px) {
@@ -201,7 +236,7 @@
   <header id="header">
     <h1>PIYUSH SHUKLA</h1>
     <p>Aspiring AI/ML System Architect | Machine learning Engineer</p>
-    <img src="Profile.jpg" class="profile-pic">
+    <img src="Profile.jpg" class="profile-pic" alt="Profile picture of Piyush Shukla">
   </header>
   <button class="menu-button" id="menuButton" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
   <nav id="navbar">
@@ -265,60 +300,58 @@
     </ul>
   </section>
   <section id="github">
-  <h2>GitHub Profile</h2>
-  <p>
-    Check out my Git-Hub Profile 
-    <a href="https://github.com/piyush1222p" target="_blank" aria-label="GitHub Profile">
-      <i class="fab fa-github" style="font-size: 24px; color: #333;"></i>
-    </a>.
-  </p>
-</section>
-<section id="projects">
-  <h2>Projects</h2>
-  <p>These links are LinkedIn Certified ✔️</p>
-  <ul class="contact-info">
-    <li>
-      <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task1-python-pythonabrcalculator-activity-7214509875198894081-zJqV?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 1">
-        <i class="fas fa-code" style="font-size: 30px; color: #003F5C;"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task2-python-passwordabrgenerator-activity-7217477085026480128-6FV9?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 2">
-        <i class="fas fa-laptop-code" style="font-size: 30px; color: #003F5C;"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task3-python-temperatureconverter-activity-7217478543276969984-KJDH?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 3">
-        <i class="fas fa-project-diagram" style="font-size: 30px; color: #003F5C;"></i>
-      </a>
-    </li>
-  </ul>
-</section>
-
-<section id="certifications">
-  <h2>Certifications</h2>
-  <p>These links are LinkedIn Certified ✔️</p>
-  <ul class="contact-info">
-    <li>
-      <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_internship-certificate-activity-7218971929947324417-RMQ4?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Certification">
-        <i class="fas fa-certificate" style="font-size: 30px; color: #003F5C;"></i>
-      </a>
-    </li>
-  </ul>
-</section>
-
-<section id="achievements">
-  <h2>Achievements</h2>
-  <p>These links are LinkedIn Certified ✔️</p>
-  <ul class="contact-info">
-    <li>
-      <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_letter-of-recommendation-activity-7220013606694748162-Mhir?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Achievement">
-        <i class="fas fa-trophy" style="font-size: 30px; color: #003F5C;"></i>
-      </a>
-    </li>
-  </ul>
-</section>
-
+    <h2>GitHub Profile</h2>
+    <p>Check out my Git-Hub Profile 
+      <a href="https://github.com/piyush1222p" target="_blank" aria-label="GitHub Profile">
+        <i class="fab fa-github" style="font-size: 24px; color: #333;"></i>
+      </a>.
+    </p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="contact-info">
+      <li>
+        <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task1-python-pythonabrcalculator-activity-7214509875198894081-zJqV?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 1">
+          <i class="fas fa-code" style="font-size: 30px; color: #003F5C;"></i>
+          <span class="verified-icon">✔</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task2-python-passwordabrgenerator-activity-7217477085026480128-6FV9?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 2">
+          <i class="fas fa-laptop-code" style="font-size: 30px; color: #003F5C;"></i>
+          <span class="verified-icon">✔</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_task3-python-temperatureconverter-activity-7217478543276969984-KJDH?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Project 3">
+          <i class="fas fa-project-diagram" style="font-size: 30px; color: #003F5C;"></i>
+          <span class="verified-icon">✔</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="contact-info">
+      <li>
+        <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_internship-certificate-activity-7218971929947324417-RMQ4?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Certification">
+          <i class="fas fa-certificate" style="font-size: 30px; color: #003F5C;"></i>
+          <span class="verified-icon">✔</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul class="contact-info">
+      <li>
+        <a href="https://www.linkedin.com/posts/piyush-shukla-9692322b7_letter-of-recommendation-activity-7220013606694748162-Mhir?utm_source=share&utm_medium=member_desktop" target="_blank" aria-label="Achievement">
+          <i class="fas fa-trophy" style="font-size: 30px; color: #003F5C;"></i>
+          <span class="verified-icon">✔</span>
+        </a>
+      </li>
+    </ul>
+  </section>
   <section id="extracurricular">
     <h2>Extracurricular Activities</h2>
     <p>I am actively engaged in contributing to open-source projects, attending tech conferences and meetups, and volunteering my IT skills to non-profit organizations.</p>
@@ -329,6 +362,11 @@
   </section>
   <footer id="footer">
     <p>&copy; 2024 Piyush Shukla. All rights reserved.</p>
+    <ul class="social-links">
+      <li><a href="https://www.linkedin.com/in/piyush-shukla-9692322b7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://github.com/piyush1222p" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://x.com/PIYUSHS27937394" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+    </ul>
   </footer>
 
   <script>
@@ -339,6 +377,38 @@
     document.querySelectorAll('nav a').forEach(function(navLink) {
       navLink.addEventListener('click', function() {
         document.getElementById('navbar').classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Active link highlighting
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
       });
     });
 
