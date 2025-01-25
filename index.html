@@ -418,6 +418,7 @@
     let lastScrollTop = 0;
     const header = document.getElementById('header');
     const footer = document.getElementById('footer');
+    let scrollUpPerformed = false; // Flag to track if the scroll up action has been performed
 
     window.addEventListener('scroll', function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -432,11 +433,12 @@
 
       // Detect if the user is at the last section
       const lastSection = document.querySelector('section:last-of-type');
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !scrollUpPerformed) {
         setTimeout(() => {
           header.style.transform = 'translateY(0)';
           footer.classList.remove('hidden');
           window.scrollBy(0, -100); // Scroll up a little bit higher
+          scrollUpPerformed = true; // Set the flag to true after performing the scroll up action
         }, 5000); // Show header and footer and scroll up after 5 seconds
       }
     });
